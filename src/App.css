@@ -28,6 +28,22 @@
   margin: 10px;
 }
 
+.playingTableCardGrid {
+  display: grid;
+  grid-template-areas:
+    "topLeft topMiddle topRight"
+    "left middle right"
+    "bottomLeft bottomMiddle bottomRight";
+  border: 1px solid #000;
+	grid-gap: 1px;
+	justify-self: center;
+  grid-template-columns: 33.3% 33.4% 33.3%;
+  grid-template-rows: 100px;
+  max-width: 292px;
+	height: auto;
+	margin: 0 auto;
+}
+
 .rightDeck {
   background-color: blue;
   grid-area: right;

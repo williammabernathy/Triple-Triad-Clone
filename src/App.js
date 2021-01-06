@@ -12,7 +12,9 @@ function App() {
         Left
       </div>
       <div className="playingTable">
-        Middle
+        <div className="playingTableCardGrid">
+
+        </div>
       </div>
       <div className="rightDeck">
         Right
