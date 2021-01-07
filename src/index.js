@@ -10,7 +10,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-//reload on changes
+// reload on changes
 if (module.hot) {
   module.hot.accept()
 }
