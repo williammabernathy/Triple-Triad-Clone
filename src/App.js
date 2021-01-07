@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="appContainer">
 
@@ -12,8 +12,8 @@ function App() {
         Left
       </div>
       <div className="playingTable">
-        <div className="playingTableCardGrid">
-
+        <div className="gameboardWrapper">
+          Board
         </div>
       </div>
       <div className="rightDeck">
