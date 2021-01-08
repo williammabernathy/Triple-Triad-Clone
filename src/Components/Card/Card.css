@@ -1,0 +1,11 @@
+.cardWrapper {
+    border-style: solid;
+    height: 200px;
+    width: 150px;
+    justify-content: center;
+}
+
+.cardStats {
+    top: 0;
+    justify-content: center;
+}

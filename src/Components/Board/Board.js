@@ -17,10 +17,14 @@ const Board = () => {
 
   // checks if the move is legal
   // if so, updates board by checking TT rules (flip adjacent, etc)
-  const checkMove = () => {};
+  const checkMove = () => {
+    checkAdjacent();
+  };
 
   // called in conjunction with checkMove
-  const checkAdjacent = () => {};
+  const checkAdjacent = () => {
+    updateGameBoardGrid();
+  };
 
   // updates the gameboard state regarding if a row-column is empty or not
   const updateGameBoardGrid = () => {
@@ -29,7 +33,11 @@ const Board = () => {
   };
 
   // checks if the board is full. if so, claims a winner
-  const checkIfBoardFull = () => {};
+  const checkIfBoardFull = () => {
+    // if board full then..
+    declareWinner();
+    // else, play another turn
+  };
 
   // called if board is full, declares a winner, and presents option
   // to reset board and play again

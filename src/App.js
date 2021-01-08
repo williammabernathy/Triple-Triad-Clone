@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Card from './Components/Card/Card';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <div className="gameboardWrapper">
           Board
         </div>
+        <Card />
       </div>
       <div className="rightDeck">
         Right
