@@ -54,7 +54,10 @@ const Board = () => {
     setWinner(null);
   };
 
-  return <div></div>;
+  return (
+    <div className="boardContainer">
+      Board Board Board
+    </div>);
 };
 
 export default Board;

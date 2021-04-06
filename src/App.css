@@ -1,39 +1,4 @@
 .appContainer {
-  display: grid;
-  grid-template-areas:
-    "header header header"
-    "left middle right";
-  grid-template-columns: 20% 60% 20%;
-  grid-template-rows: 100px;
   height: 100vh;
-  background-color: black;
-}
-
-.menuWrapper {
-  background-color: blueviolet;
-  grid-area: header;
-  grid-row-start: 1;
-  margin: 10px;
-}
-
-.leftDeck {
-  background-color: green;
-  grid-area: left;
-  margin: 10px;
-}
-
-.playingTable {
-  background-color: red;
-  grid-area: middle;
-  margin: 10px;
-}
-
-.gameboardWrapper {
-
-}
-
-.rightDeck {
-  background-color: blue;
-  grid-area: right;
-  margin: 10px;
+  background-color: rgb(37, 37, 37);
 }
