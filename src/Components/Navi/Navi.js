@@ -10,9 +10,9 @@ const Navi = () => {
                 <Navbar bg="dark" variant="dark">
                     <Navbar.Brand href="/">TT Clone</Navbar.Brand>
                     <Nav className="mr-auto">
-                        <Nav.Link href="/Play">Play</Nav.Link>
-                        <Nav.Link href="/Deck">Deck</Nav.Link>
-                        <Nav.Link href="/Cards">Cards</Nav.Link>
+                        <Nav.Link href="/play">Play</Nav.Link>
+                        <Nav.Link href="/deck">Deck Builder</Nav.Link>
+                        <Nav.Link href="/cardlist">Cards</Nav.Link>
                     </Nav>
                 </Navbar>
             </Router>
