@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Card from './Components/Card/Card';
+import Board from './Components/Board/Board';
 
 const App = () => {
   return (
@@ -13,9 +14,7 @@ const App = () => {
         Left
       </div>
       <div className="playingTable">
-        <div className="gameboardWrapper">
-          Board
-        </div>
+        <Board />
         <Card />
       </div>
       <div className="rightDeck">

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Components/Board.css";
+import "./Board.css";
 
 const Board = () => {
   // gridPos = 3x3 array
