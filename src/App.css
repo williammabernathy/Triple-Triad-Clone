@@ -1,3 +1,24 @@
+.navContainer {
+  padding: 10px;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar {
+  font-size: 24px;
+}
+
+.navbar-brand {
+  font-size: 35px;
+  cursor:pointer;
+  padding: 10px;
+}
+
+.nav-link {
+  margin: 0px 10px 0px 10px;
+}
+
 .appContainer {
   height: 100vh;
   background-color: rgb(37, 37, 37);
