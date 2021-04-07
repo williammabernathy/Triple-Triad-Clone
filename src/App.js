@@ -18,9 +18,8 @@ const App = () => {
     fetch(`https://triad.raelys.com/api/cards`)
     .then(response => response.json())
     .then(results => {
-      setCardData({ results })
+      setCardData(results)
       setLoading(false);
-      console.log(cardData);
     })
     .catch((error) => {
       console.log(error);
