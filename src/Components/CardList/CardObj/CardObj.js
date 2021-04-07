@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./CardObj.css";
 
-const CardObj = ({ title }) => {
+const CardObj = ({ icon, name, stars, stats }) => {
 
     const [cardData, setCardData] = useState(null)
 
@@ -16,16 +16,16 @@ const CardObj = ({ title }) => {
                 <tbody>
                     <tr>
                         <td>
-                            {title}
+                            <img src={icon} alt='Icon'></img>
                         </td>
                         <td>
-                            stuff 1
+                            {name}
                         </td>
                         <td>
-                            stuff 2
+                            {stars}
                         </td>
                         <td>
-                            stuff 3
+                            {stats}
                         </td>
                     </tr>
                 </tbody>

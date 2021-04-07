@@ -1,10 +1,10 @@
 .cardObjWrapper {
     color: white;
-    border: solid 1px rgb(83, 80, 80);
+    border: solid 1px #525252;
     border-radius: 3px;
     padding: 15px;
     margin: 10px 20px 10px 20px;
-    background-color: rgb(83, 80, 80);
+    background-color: #535C65;
     transition: transform 0.3s;
 }
 

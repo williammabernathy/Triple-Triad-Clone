@@ -16,15 +16,15 @@ const App = () => {
   const fetchCards = () => {
     setLoading(true);
     fetch(`https://triad.raelys.com/api/cards`)
-    .then(response => response.json())
-    .then(results => {
-      setCardData(results)
-      setLoading(false);
-    })
-    .catch((error) => {
-      console.log(error);
-      setLoading(false);
-    })
+      .then(response => response.json())
+      .then(results => {
+        setCardData(results)
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.log(error);
+        setLoading(false);
+      })
   }
 
   const updateHistory = (path) => {
@@ -33,13 +33,13 @@ const App = () => {
 
   useEffect(() => {
     fetchCards();
-    console.log('useEffect called');
   }, []);
 
   return (
     <div className="appContainer">
 
       <Router history={history}>
+
         <div className="navContainer">
           <Navbar bg="dark" variant="dark">
             <Navbar.Brand onClick={() => updateHistory('/')}>TT Clone</Navbar.Brand>
@@ -52,16 +52,19 @@ const App = () => {
         </div>
 
         {loading ? (
-          <div>Loading</div>) : (
-        <div className="contentContainer">
-          <Switch>
-            <Route exact path='/' component={Home}></Route>
-            <Route path='/play' component={Board}></Route>
-            <Route path='/deck' component={Deck}></Route>
-            <Route path='/cardlist' component={CardList}></Route>
-          </Switch>
-        </div>
-        )}
+          <div className="loading">
+            Loading
+          </div>)
+          : (
+            <div className="contentContainer">
+              <Switch>
+                <Route exact path='/' component={Home}></Route>
+                <Route path='/play' component={Board}></Route>
+                <Route path='/deck' component={Deck}></Route>
+                <Route path='/cardlist'><CardList allCardData={cardData} appLoading={loading} /></Route>
+              </Switch>
+            </div>
+          )}
 
       </Router>
 

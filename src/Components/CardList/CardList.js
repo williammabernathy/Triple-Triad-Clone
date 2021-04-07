@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./CardList.css";
 import CardObj from './CardObj/CardObj';
 
-const CardList = () => {
+const CardList = ( { allCardData, appLoading }) => {
+  const [loading, setLoading] = useState(true);
+  console.log('data: ');
+  console.log(allCardData);
 
-  const titles = ['title 1', 'title 2', 'title 3'];
+  useEffect(() => {
+    setLoading(appLoading)
+  }, [appLoading]);
+  
+  
 
   return (
     <div className="cardListWrapper">
@@ -16,23 +23,34 @@ const CardList = () => {
               Image
             </th>
             <th>
-              Stat 1
+              Name
             </th>
             <th>
-              Stat 2
+              Stars
             </th>
             <th>
-              Stat 3
+              Stats
             </th>
           </tr>
         </tbody>
       </table>
 
-      {titles.map((title, index) =>
-        <CardObj title={titles[index]}
-          key={index}
-        />
-      )}
+      {loading ? (
+        <div className="loading">
+          Loading
+        </div>)
+        : (
+          allCardData.results.map((data, index) =>
+            <CardObj
+              icon={data.icon}
+              name={data.name}
+              stars={data.stars}
+              stats={data.stats.formatted.top}
+              key={index}
+            />
+          )
+        )}
+
 
     </div>
   );
