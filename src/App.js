@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { Navbar, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -9,11 +9,33 @@ import CardList from './Components/CardList/CardList';
 import { Router, Route, Switch, useHistory } from 'react-router-dom';
 
 const App = () => {
+  const [cardData, setCardData] = useState({});
+  const [loading, setLoading] = useState(false);
   const history = useHistory();
+
+  const fetchCards = () => {
+    setLoading(true);
+    fetch(`https://triad.raelys.com/api/cards`)
+    .then(response => response.json())
+    .then(results => {
+      setCardData({ results })
+      setLoading(false);
+      console.log(cardData);
+    })
+    .catch((error) => {
+      console.log(error);
+      setLoading(false);
+    })
+  }
 
   const updateHistory = (path) => {
     history.push(path);
   };
+
+  useEffect(() => {
+    fetchCards();
+    console.log('useEffect called');
+  }, []);
 
   return (
     <div className="appContainer">
@@ -30,6 +52,8 @@ const App = () => {
           </Navbar>
         </div>
 
+        {loading ? (
+          <div>Loading</div>) : (
         <div className="contentContainer">
           <Switch>
             <Route exact path='/' component={Home}></Route>
@@ -38,6 +62,7 @@ const App = () => {
             <Route path='/cardlist' component={CardList}></Route>
           </Switch>
         </div>
+        )}
 
       </Router>
 

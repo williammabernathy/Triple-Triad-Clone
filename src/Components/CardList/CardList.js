@@ -10,8 +10,8 @@ const CardList = () => {
     <div className="cardListWrapper">
 
       <table>
-        <tr>
-          <th>
+        <tbody>
+          <tr>
             <th>
               Image
             </th>
@@ -24,8 +24,8 @@ const CardList = () => {
             <th>
               Stat 3
             </th>
-          </th>
-        </tr>
+          </tr>
+        </tbody>
       </table>
 
       {titles.map((title, index) =>
