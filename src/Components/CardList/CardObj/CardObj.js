@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./CardObj.css";
 
-const CardObj = () => {
+const CardObj = ({ title }) => {
 
     const [cardData, setCardData] = useState(null)
 
@@ -11,7 +11,26 @@ const CardObj = () => {
 
     return (
         <div className="cardObjWrapper">
-            CardObj
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            {title}
+                        </td>
+                        <td>
+                            stuff 1
+                        </td>
+                        <td>
+                            stuff 2
+                        </td>
+                        <td>
+                            stuff 3
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
         </div>
     );
 };
